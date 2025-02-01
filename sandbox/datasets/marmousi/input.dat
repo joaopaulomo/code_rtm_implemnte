@@ -1,0 +1,16 @@
+velfile=      model-375.cwp
+dadofile=     dobs.ob
+vtrue_file    model-true.bin
+nz=           375
+nx=           369
+dz=           8.
+dx=           25.
+nt=           5000
+dt=           0.0008
+sjz=          1
+nsx=          1
+s0x=          180
+ds=           2
+rjz=          1
+peakf=        6.5
+abcWidth=     40
