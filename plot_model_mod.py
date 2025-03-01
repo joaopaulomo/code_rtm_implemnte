@@ -116,6 +116,50 @@ def plot_image2(data, model, vmin=None, vmax=None, colorbar=True, cmap="gray",
     if show:
         plt.show()
 
+def plot_shotrecord(rec, model, t0, tn, colorbar=True, clip_percent=None, clip_low=None):
+    """
+    Plot a shot record (receiver values over time) with optional percentile clipping.
+
+    Parameters
+    ----------
+    rec : ndarray
+        Receiver data with shape (time, points).
+    model : Model
+        Object that holds the velocity model.
+    t0 : int
+        Start of time dimension to plot.
+    tn : int
+        End of time dimension to plot.
+    clip_percent : float, optional
+        Percentage threshold for clipping high values.
+    clip_low : float, optional
+        Percentage threshold for clipping low values.
+    """
+    rec = np.asarray(rec)
+    
+    if clip_percent is not None or clip_low is not None:
+        low_value = np.percentile(rec, clip_low) if clip_low is not None else np.min(rec)
+        high_value = np.percentile(rec, clip_percent) if clip_percent is not None else np.max(rec)
+        print(f"Clipping low values below {low_value:.5f} and high values above {high_value:.5f}.")
+        rec = np.clip(rec, low_value, high_value)
+    
+    scale = np.max(np.abs(rec)) / 10.
+    extent = [
+        model.origin[0], model.origin[0] + 1e-3 * model.domain_size[0],
+        1e-3 * tn, t0
+    ]
+
+    plot = plt.imshow(rec, vmin=-scale, vmax=scale, cmap=plt.get_cmap("gray"), extent=extent)
+    plt.xlabel('X position (km)')
+    plt.ylabel('Time (s)')
+
+    # Create aligned colorbar on the right
+    if colorbar:
+        ax = plt.gca()
+        divider = make_axes_locatable(ax)
+        cax = divider.append_axes("right", size="5%", pad=0.05)
+        plt.colorbar(plot, cax=cax)
+    plt.show()
 
 
 
