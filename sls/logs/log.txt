@@ -1,1 +1,13 @@
-
+Operator `initdamp` ran in 0.01 s
+Operator `initdamp` ran in 0.01 s
+Operator `Forward` ran in 4.19 s
+Operator `Forward` ran in 4.02 s
+Operator `Forward` ran in 3.95 s
+Shot source 1 out of 300
+[2KOperator `Forward` ran in 4.03 s
+[2KShot source 2 out of 300
+[2KOperator `Forward` ran in 3.97 s
+[2KShot source 3 out of 300
+[2KOperator `Forward` ran in 3.97 s
+[2KShot source 4 out of 300
+[2K

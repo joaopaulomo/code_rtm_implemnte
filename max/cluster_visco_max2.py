@@ -71,7 +71,7 @@ d1.data.tofile('sismogram_smooth.bin')
 d2 = d1.data - d0.data
 d2.tofile('sismogram_residual.bin')
 
-nshots = 151
+nshots = 300
 source_locations = np.empty((nshots, 2), dtype=np.float32)
 source_locations[:, 0] = np.linspace(10., model.domain_size[0], num=nshots)
 source_locations[:, 1] = 5.
