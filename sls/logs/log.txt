@@ -1,13 +1,125 @@
 Operator `initdamp` ran in 0.01 s
 Operator `initdamp` ran in 0.01 s
-Operator `Forward` ran in 4.19 s
-Operator `Forward` ran in 4.02 s
-Operator `Forward` ran in 3.95 s
+Operator `Forward` ran in 4.12 s
+Operator `Forward` ran in 4.08 s
+Operator `Forward` ran in 4.12 s
 Shot source 1 out of 300
-[2KOperator `Forward` ran in 4.03 s
+[2KOperator `Forward` ran in 4.04 s
 [2KShot source 2 out of 300
-[2KOperator `Forward` ran in 3.97 s
+[2KOperator `Forward` ran in 4.08 s
 [2KShot source 3 out of 300
-[2KOperator `Forward` ran in 3.97 s
+[2KOperator `Forward` ran in 4.01 s
 [2KShot source 4 out of 300
-[2K
+[2KOperator `Forward` ran in 4.00 s
+[2KShot source 5 out of 300
+[2KOperator `Forward` ran in 3.97 s
+[2KShot source 6 out of 300
+[2KOperator `Forward` ran in 4.09 s
+[2KShot source 7 out of 300
+[2KOperator `Forward` ran in 4.06 s
+[2KShot source 8 out of 300
+[2KOperator `Forward` ran in 4.16 s
+[2KShot source 9 out of 300
+[2KOperator `Forward` ran in 4.03 s
+[2KShot source 10 out of 300
+[2KOperator `Forward` ran in 3.98 s
+[2KShot source 11 out of 300
+[2KOperator `Forward` ran in 3.98 s
+[2KShot source 12 out of 300
+[2KOperator `Forward` ran in 4.04 s
+[2KShot source 13 out of 300
+[2KOperator `Forward` ran in 4.01 s
+[2KShot source 14 out of 300
+[2KOperator `Forward` ran in 3.98 s
+[2KShot source 15 out of 300
+[2KOperator `Forward` ran in 4.09 s
+[2KShot source 16 out of 300
+[2KOperator `Forward` ran in 4.06 s
+[2KShot source 17 out of 300
+[2KOperator `Forward` ran in 4.10 s
+[2KShot source 18 out of 300
+[2KOperator `Forward` ran in 4.08 s
+[2KShot source 19 out of 300
+[2KOperator `Forward` ran in 4.06 s
+[2KShot source 20 out of 300
+[2KOperator `Forward` ran in 4.05 s
+[2KShot source 21 out of 300
+[2KOperator `Forward` ran in 4.07 s
+[2KShot source 22 out of 300
+[2KOperator `Forward` ran in 4.04 s
+[2KShot source 23 out of 300
+[2KOperator `Forward` ran in 4.09 s
+[2KShot source 24 out of 300
+[2KOperator `Forward` ran in 4.12 s
+[2KShot source 25 out of 300
+[2KOperator `Forward` ran in 4.09 s
+[2KShot source 26 out of 300
+[2KOperator `Forward` ran in 4.10 s
+[2KShot source 27 out of 300
+[2KOperator `Forward` ran in 4.08 s
+[2KShot source 28 out of 300
+[2KOperator `Forward` ran in 4.10 s
+[2KShot source 29 out of 300
+[2KOperator `Forward` ran in 4.08 s
+[2KShot source 30 out of 300
+[2KOperator `Forward` ran in 4.10 s
+[2KShot source 31 out of 300
+[2KOperator `Forward` ran in 4.06 s
+[2KShot source 32 out of 300
+[2KOperator `Forward` ran in 4.08 s
+[2KShot source 33 out of 300
+[2KOperator `Forward` ran in 4.04 s
+[2KShot source 34 out of 300
+[2KOperator `Forward` ran in 4.11 s
+[2KShot source 35 out of 300
+[2KOperator `Forward` ran in 4.09 s
+[2KShot source 36 out of 300
+[2KOperator `Forward` ran in 4.06 s
+[2KShot source 37 out of 300
+[2KOperator `Forward` ran in 4.09 s
+[2KShot source 38 out of 300
+[2KOperator `Forward` ran in 4.08 s
+[2KShot source 39 out of 300
+[2KOperator `Forward` ran in 4.10 s
+[2KShot source 40 out of 300
+[2KOperator `Forward` ran in 4.10 s
+[2KShot source 41 out of 300
+[2KOperator `Forward` ran in 4.07 s
+[2KShot source 42 out of 300
+[2KOperator `Forward` ran in 4.11 s
+[2KShot source 43 out of 300
+[2KOperator `Forward` ran in 4.07 s
+[2KShot source 44 out of 300
+[2KOperator `Forward` ran in 4.10 s
+[2KShot source 45 out of 300
+[2KOperator `Forward` ran in 4.07 s
+[2KShot source 46 out of 300
+[2KOperator `Forward` ran in 4.08 s
+[2KShot source 47 out of 300
+[2KOperator `Forward` ran in 4.11 s
+[2KShot source 48 out of 300
+[2KOperator `Forward` ran in 4.08 s
+[2KShot source 49 out of 300
+[2KOperator `Forward` ran in 4.12 s
+[2KShot source 50 out of 300
+[2KOperator `Forward` ran in 4.06 s
+[2KShot source 51 out of 300
+[2KOperator `Forward` ran in 4.10 s
+[2KShot source 52 out of 300
+[2KOperator `Forward` ran in 4.08 s
+[2KShot source 53 out of 300
+[2KOperator `Forward` ran in 4.07 s
+[2KShot source 54 out of 300
+[2KOperator `Forward` ran in 4.04 s
+[2KShot source 55 out of 300
+[2KOperator `Forward` ran in 4.04 s
+[2KShot source 56 out of 300
+[2KOperator `Forward` ran in 4.03 s
+[2KShot source 57 out of 300
+[2KOperator `Forward` ran in 4.04 s
+[2KShot source 58 out of 300
+[2KOperator `Forward` ran in 4.08 s
+[2KShot source 59 out of 300
+[2KOperator `Forward` ran in 4.10 s
+[2KShot source 60 out of 300
+[2Kslurmstepd: error: *** JOB 805314 ON c026 CANCELLED AT 2025-04-27T21:57:45 ***
