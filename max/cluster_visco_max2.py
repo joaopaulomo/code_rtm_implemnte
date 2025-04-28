@@ -20,7 +20,7 @@ spacing = (12.5, 12.5)
 origin = (0., 0.)
 
 v = np.empty(shape, dtype=dtype)
-path = "/home/joao.santana/visco_2/code_rtm_implemnte/marmousi-resample-738x240.bin"
+path = "/home/joao.santana/visco_cluster/code_rtm_implemnte/max/marmousi-resample-738x240.bin"
 a = open(path)
 v = np.fromfile(a, dtype=dtype).reshape([nx, nz])
 v = v / 1000

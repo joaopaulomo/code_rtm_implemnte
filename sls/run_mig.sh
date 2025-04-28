@@ -16,6 +16,6 @@ conda activate devito
 export DEVITO_LANGUAGE=openmp
 
 # Caminho absoluto do seu programa em python.
-PGR=/home/joao.santana/cluster_sls/cluster_visco_sls.py
+PGR=/home/joao.santana/visco_cluster/code_rtm_implemnte/sls/cluster_visco_sls.py
 
 python $PGR $WORK_DIR/$1 $WORK_DIR/$2
