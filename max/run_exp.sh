@@ -11,6 +11,6 @@
 # Neste caso, serão o primeiro e segundo argumento deste script.
 # O terceiro indica o caminho relativo do arquivo de saída.s
 
-WORK_DIR="/home/joao.santana/visco_cluster/code_rtm_implemnte/kv2/logs/log.txt/log.txt"
+WORK_DIR="/home/joao.santana/visco_cluster/code_rtm_implemnte/kv2/logs/log.txt"
 
 sbatch -A geo-inct -p standard -o $WORK_DIR run_mig.sh $1 $2
