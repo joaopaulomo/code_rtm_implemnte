@@ -97,8 +97,9 @@ for i in range(nshots):
     d0[i] = d.data[:]
 
     clear_output(wait=True)
+    gc.collect()
 
-gc.collect()
+
 
 kernels = {
     'sls2': sls_2nd_order,
@@ -107,7 +108,7 @@ kernels = {
     'acoustic2': acoustic_2nd_order
 }
 
-def ImagingOperator(model, model0, image, dt, kernel="kv2"):
+def ImagingOperator(model, model0, image, dt, kernel="sls2"):
     v = TimeFunction(name='v', grid=model.grid, time_order=2, space_order=space_order, staggered=NODE)
     u = TimeFunction(name='u', grid=model.grid, time_order=2, space_order=space_order, save=time_range.num, staggered=NODE)
     eq_kernel = kernels[kernel]
@@ -175,15 +176,15 @@ stencil = Eq(laplace_result_1, data1.laplace)
 op = Operator([stencil])
 op.apply()
 
-stencil = Eq(laplace_result_2, data1.laplace)
+stencil = Eq(laplace_result_2, data2.laplace)
 op = Operator([stencil])
 op.apply()
 
-stencil = Eq(laplace_result_3, data1.laplace)
+stencil = Eq(laplace_result_3, data3.laplace)
 op = Operator([stencil])
 op.apply()
 
-stencil = Eq(laplace_result_4, data1.laplace)
+stencil = Eq(laplace_result_4, data4.laplace)
 op = Operator([stencil])
 op.apply()
 

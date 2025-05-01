@@ -79,6 +79,9 @@ for imge, nam in zip(sismo_images, sismo_names):
     plt.savefig(nam, dpi=300, bbox_inches='tight')
     plt.close()
 
+
+
+
 nshots = 300
 source_locations = np.empty((nshots, 2), dtype=np.float32)
 source_locations[:, 0] = np.linspace(10., model.domain_size[0], num=nshots)
@@ -90,12 +93,13 @@ for i in range(nshots):
     print('Shot source %d out of %d' % (i + 1, nshots))
     geometry.src_positions[0, :] = source_locations[i, :]
 
-    d, _ = modelling(model, time_range, f0, dt, sl=source_locations[i, :], kernel='kv2', time_order=2)
+    d = solver.forward(vp=model.vp, qp=model.qp, b=model.b, dt=dt)[0]
     d0[i] = d.data[:]
 
     clear_output(wait=True)
+    gc.collect()
 
-gc.collect()
+
 
 kernels = {
     'sls2': sls_2nd_order,
@@ -196,3 +200,4 @@ for img, nome in zip(imagens, nomes):
     plot_image2(np.diff(img, axis=1), model, clip_percent=98, clip_low=2)
     plt.savefig(nome, dpi=300, bbox_inches='tight')
     plt.close()
+
