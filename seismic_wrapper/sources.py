@@ -1,0 +1,1 @@
+RICKER_SRC = 'Ricker'
