@@ -13,16 +13,16 @@ import matplotlib.pyplot as plt
 import gc
 from IPython.display import clear_output
 
-nx, nz = 738, 240
-nbl = 200
+nx, nz = 801, 187
+nbl = 90
 space_order = 8
 dtype = np.float32
 shape = (nx, nz)
-spacing = (12.5, 12.5)
+spacing = (25, 25)
 origin = (0., 0.)
 
 v = np.empty(shape, dtype=dtype)
-path = "/home/joao.santana/visco_cluster/code_rtm_implemnte/code_with_matplot/sls/marmousi-resample-738x240.bin"
+path = "/home/joao.santana/cluster_overthrust/code_rtm_implemnte/code_with_matplot/max/overthrust2D.bin"
 a = open(path)
 v = np.fromfile(a, dtype=dtype).reshape([nx, nz])
 v = v / 1000
@@ -32,6 +32,7 @@ qp[:] = 3.516 * ((v[:] * 1000.) ** 2.2) * 10 ** (-6)
 
 rho = np.zeros(shape)
 rho[:] = 0.31 * (v[:] * 1000.) ** 0.25
+
 
 model = ModelViscoacoustic(
     space_order=space_order, vp=v, qp=qp, b=1 / rho,
@@ -93,13 +94,13 @@ for i in range(nshots):
     print('Shot source %d out of %d' % (i + 1, nshots))
     geometry.src_positions[0, :] = source_locations[i, :]
 
-    d, _ = modelling(model, time_range, f0, dt, sl=source_locations[i, :], kernel='sls2', time_order=2)
+    d = solver.forward(vp=model.vp, qp=model.qp, b=model.b, dt=dt)[0]
     d0[i] = d.data[:]
 
-
     clear_output(wait=True)
+    gc.collect()
 
-gc.collect()
+
 
 kernels = {
     'sls2': sls_2nd_order,
@@ -108,7 +109,7 @@ kernels = {
     'acoustic2': acoustic_2nd_order
 }
 
-def ImagingOperator(model, model0, image, dt, kernel="kv2"):
+def ImagingOperator(model, model0, image, dt, kernel="max2"):
     v = TimeFunction(name='v', grid=model.grid, time_order=2, space_order=space_order, staggered=NODE)
     u = TimeFunction(name='u', grid=model.grid, time_order=2, space_order=space_order, save=time_range.num, staggered=NODE)
     eq_kernel = kernels[kernel]
@@ -176,15 +177,15 @@ stencil = Eq(laplace_result_1, data1.laplace)
 op = Operator([stencil])
 op.apply()
 
-stencil = Eq(laplace_result_2, data1.laplace)
+stencil = Eq(laplace_result_2, data2.laplace)
 op = Operator([stencil])
 op.apply()
 
-stencil = Eq(laplace_result_3, data1.laplace)
+stencil = Eq(laplace_result_3, data3.laplace)
 op = Operator([stencil])
 op.apply()
 
-stencil = Eq(laplace_result_4, data1.laplace)
+stencil = Eq(laplace_result_4, data4.laplace)
 op = Operator([stencil])
 op.apply()
 

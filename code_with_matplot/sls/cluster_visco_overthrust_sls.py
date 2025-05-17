@@ -13,16 +13,16 @@ import matplotlib.pyplot as plt
 import gc
 from IPython.display import clear_output
 
-nx, nz = 738, 240
-nbl = 200
+nx, nz = 801, 187
+nbl = 90
 space_order = 8
 dtype = np.float32
 shape = (nx, nz)
-spacing = (12.5, 12.5)
+spacing = (25, 25)
 origin = (0., 0.)
 
 v = np.empty(shape, dtype=dtype)
-path = "/home/joao.santana/visco_cluster/code_rtm_implemnte/code_with_matplot/kv2/marmousi-resample-738x240.bin"
+path = "/home/joao.santana/cluster_overthrust/code_rtm_implemnte/code_with_matplot/sls/overthrust2D.bin"
 a = open(path)
 v = np.fromfile(a, dtype=dtype).reshape([nx, nz])
 v = v / 1000
@@ -108,7 +108,7 @@ kernels = {
     'acoustic2': acoustic_2nd_order
 }
 
-def ImagingOperator(model, model0, image, dt, kernel="kv2"):
+def ImagingOperator(model, model0, image, dt, kernel="sls2"):
     v = TimeFunction(name='v', grid=model.grid, time_order=2, space_order=space_order, staggered=NODE)
     u = TimeFunction(name='u', grid=model.grid, time_order=2, space_order=space_order, save=time_range.num, staggered=NODE)
     eq_kernel = kernels[kernel]
